@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Morg MC | SMP Server</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <header class="hero">
+        <div class="hero-content fade-in">
+            <h1>Morg <span>MC</span></h1>
+            <p class="subtitle">Java & Bedrock SMP Server</p>
+            
+            <div class="ip-container" onclick="copyIP()" title="Click to copy IP">
+                <span id="ip-text">morgmc.ddns.net</span>
+                <div class="status">
+                    <span class="dot"></span>
+                    <span id="player-count">Loading...</span> players online
+                </div>
+            </div>
+            
+            <div class="hero-buttons">
+                <a href="#ranks" class="btn btn-primary">View Ranks</a>
+                <a href="https://discord.gg/9nPsb7sCtZ" target="_blank" class="btn btn-discord">
+                    <i class="fab fa-discord"></i> Join Discord
+                </a>
+            </div>
+        </div>
+        <a href="#about" class="scroll-down"><i class="fas fa-chevron-down"></i></a>
+    </header>
+
+    <main>
+        <section id="about" class="section reveal">
+            <h2 class="section-title">Welcome to Morg MC</h2>
+            <div class="container">
+                <p class="about-text">Experience the ultimate survival multiplayer on our cross-play server. Connect with friends on both Java and Bedrock editions. Features an active community, balanced economy, and fair gameplay.</p>
+            </div>
+        </section>
+
+        <section id="online-players" class="section reveal">
+            <h2 class="section-title">Online Players</h2>
+            <div class="players-grid" id="players-list">
+                </div>
+        </section>
+
+        <section id="ranks" class="section reveal">
+            <h2 class="section-title">Server Ranks</h2>
+            <div class="ranks-container container">
+                
+                <div class="rank-card rank-vip">
+                    <div class="rank-header">
+                        <i class="fas fa-star rank-icon"></i>
+                        <h3>VIP</h3>
+                    </div>
+                    <ul class="perks-list">
+                        <li>Vip prefix</li>
+                        <li>Priority in tab list</li>
+                        <li>/Fly in lobbies & afk zones</li>
+                        <li>Vip kit</li>
+                    </ul>
+                </div>
+
+                <div class="rank-card rank-legend">
+                    <div class="rank-header">
+                        <i class="fas fa-crown rank-icon"></i>
+                        <h3>Legend</h3>
+                    </div>
+                    <ul class="perks-list">
+                        <li>Legend prefix</li>
+                        <li>Priority in tab list</li>
+                        <li>Access commands:
+                            <ul>
+                                <li>/enderchest</li>
+                                <li>/fly (lobbies/afk)</li>
+                                <li>/Craft, /smithingtable</li>
+                                <li>/anvil, /repair, /back</li>
+                            </ul>
+                        </li>
+                        <li>Includes all <span class="vip-color">VIP</span> perks</li>
+                        <li>Legend kit</li>
+                        <li>Get gems everywhere</li>
+                    </ul>
+                </div>
+
+                <div class="rank-card rank-mg highlight-rank">
+                    <div class="rank-header">
+                        <i class="fas fa-gem rank-icon"></i>
+                        <h3>MG+</h3>
+                    </div>
+                    <ul class="perks-list">
+                        <li>MG+ prefix</li>
+                        <li>Priority in tab list</li>
+                        <li>Access commands:
+                            <ul>
+                                <li>/enderchest</li>
+                                <li>/fly (lobbies/afk)</li>
+                                <li>/Craft, /smithingtable</li>
+                                <li>/anvil, /repair, /back</li>
+                            </ul>
+                        </li>
+                        <li>Includes all <span class="vip-color">VIP</span> & <span class="legend-color">Legend</span></li>
+                        <li>Morgo kit</li>
+                        <li>Keep inventory</li>
+                        <li>Get gems everywhere</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="discord" class="section reveal">
+            <div class="discord-block container">
+                <i class="fab fa-discord discord-big-icon"></i>
+                <h2>Join Our Community</h2>
+                <p>Stay updated, participate in events, and chat with other players on our official Discord server.</p>
+                <a href="https://discord.gg/9nPsb7sCtZ" target="_blank" class="btn btn-discord btn-lg">
+                    Join Morg MC Discord
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container fade-in">
+            <p class="greeting">Thanks for visiting!</p>
+            <p class="server-name">Morg MC SMP</p>
+            <p class="server-details">IP: morgmc.ddns.net | Port: 40457</p>
+            <p class="copyright">&copy; 2023 Morg MC. Not affiliated with Mojang AB.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
