@@ -1,0 +1,336 @@
+:root {
+    --bg-color: #0f0518;
+    --header-bg: rgba(26, 9, 45, 0.9);
+    --primary: #8b5cf6;
+    --secondary: #c084fc;
+    --accent: #e879f9;
+    --text-main: #f3e8ff;
+    --text-muted: #d8b4fe;
+    --card-bg: rgba(43, 15, 76, 0.6);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    overflow-x: hidden;
+}
+
+body.ar {
+    font-family: 'Cairo', sans-serif;
+    direction: rtl;
+}
+
+/* Header */
+header {
+    position: fixed;
+    top: -100px; /* Hidden initially for animation */
+    left: 0;
+    width: 100%;
+    background: var(--header-bg);
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    z-index: 1000;
+    transition: top 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    border-bottom: 2px solid var(--primary);
+}
+
+header.show {
+    top: 0;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 800;
+    color: var(--accent);
+    text-shadow: 0 0 10px var(--primary);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+nav ul li a {
+    color: var(--text-main);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 16px;
+    transition: color 0.3s, transform 0.3s;
+    display: inline-block;
+}
+
+nav ul li a:hover {
+    color: var(--accent);
+    transform: translateY(-3px);
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.discord-btn {
+    background: linear-gradient(45deg, #5865F2, #7c85f5);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.discord-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px #5865F2;
+}
+
+.menu-dots {
+    position: relative;
+    cursor: pointer;
+    font-size: 20px;
+    padding: 5px;
+}
+
+.dropdown {
+    position: absolute;
+    top: 40px;
+    right: 0;
+    background: var(--card-bg);
+    border: 1px solid var(--primary);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    width: 120px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, transform 0.3s;
+    transform: translateY(-10px);
+}
+
+body.ar .dropdown { right: auto; left: 0; }
+
+.dropdown.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.dropdown a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    text-align: center;
+    transition: background 0.3s;
+}
+.dropdown a:hover { background: var(--primary); }
+
+/* Hero Section */
+#hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: radial-gradient(circle at center, rgba(139, 92, 246, 0.2) 0%, var(--bg-color) 70%);
+}
+
+#typing-text {
+    font-size: 4rem;
+    font-weight: 800;
+    color: var(--accent);
+    text-shadow: 0 0 20px var(--primary);
+    border-right: 4px solid var(--accent);
+    white-space: nowrap;
+    overflow: hidden;
+    padding-right: 5px;
+    animation: blinkCursor 0.7s infinite normal;
+}
+
+.scroll-hint {
+    margin-top: 40px;
+    font-size: 1.2rem;
+    color: var(--text-muted);
+    animation: bounce 2s infinite;
+}
+
+/* Sections Base */
+section {
+    padding: 80px 20px;
+    min-height: 50vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: var(--accent);
+    text-shadow: 0 0 10px var(--primary);
+}
+
+/* Store Options */
+.store-buttons {
+    display: flex;
+    gap: 30px;
+}
+
+.store-choice-btn {
+    padding: 20px 50px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    background: rgba(139, 92, 246, 0.2);
+    border: 2px solid var(--primary);
+    border-radius: 15px;
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.store-choice-btn:hover {
+    transform: translateY(-10px) scale(1.05);
+    background: var(--primary);
+    box-shadow: 0 10px 30px rgba(139, 92, 246, 0.5);
+}
+
+/* Cards (Ranks, Keys, Staff) */
+.cards-container {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 1200px;
+}
+
+.card {
+    background: var(--card-bg);
+    border: 2px solid transparent;
+    border-radius: 20px;
+    padding: 30px;
+    width: 300px;
+    text-align: center;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: relative;
+    cursor: pointer;
+    backdrop-filter: blur(5px);
+}
+
+.card h3 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: var(--accent);
+}
+
+.card:hover {
+    transform: scale(1.08) translateY(-10px);
+    border-color: var(--secondary);
+    box-shadow: 0 0 25px var(--primary);
+    z-index: 10;
+}
+
+.features {
+    list-style: none;
+    text-align: left;
+    margin-bottom: 20px;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: all 0.5s ease;
+}
+
+body.ar .features { text-align: right; }
+
+.card:hover .features {
+    height: 250px; /* Expands on hover */
+    opacity: 1;
+    margin-top: 15px;
+}
+
+.features li { margin-bottom: 8px; }
+
+.price {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.buy-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background: linear-gradient(45deg, var(--primary), var(--secondary));
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    font-weight: bold;
+    transition: transform 0.3s;
+}
+
+.buy-btn:hover { transform: scale(1.1); }
+
+/* specific colors for cards */
+.morgo-plus { border-bottom: 4px solid #ffaa00; }
+.morgo-plus:hover { box-shadow: 0 0 30px #ffaa00; border-color: #ffaa00; }
+
+.legend { border-bottom: 4px solid #ff5555; }
+.legend:hover { box-shadow: 0 0 30px #ff5555; border-color: #ff5555; }
+
+.vip { border-bottom: 4px solid #55ff55; }
+.vip:hover { box-shadow: 0 0 30px #55ff55; border-color: #55ff55; }
+
+/* Scroll Animations */
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.animate-on-scroll.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Keyframes */
+@keyframes blinkCursor {
+    50% { border-right-color: transparent; }
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+    40% { transform: translateY(-15px); }
+    60% { transform: translateY(-7px); }
+}
+
+/* Content Box */
+.content-box {
+    background: var(--card-bg);
+    padding: 30px;
+    border-radius: 15px;
+    border: 1px solid var(--primary);
+    max-width: 800px;
+    text-align: center;
+    font-size: 1.2rem;
+    line-height: 1.6;
+}

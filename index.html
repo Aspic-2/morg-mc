@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Morg Network SMP</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&family=Cairo:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header id="main-header">
+        <div class="logo" data-en="MORG NETWORK" data-ar="مورج نتورك">MORG NETWORK</div>
+        <nav>
+            <ul>
+                <li><a href="#about" data-en="About" data-ar="القصة">About</a></li>
+                <li><a href="#store-options" data-en="Store" data-ar="المتجر">Store</a></li>
+                <li><a href="#staff" data-en="Staff" data-ar="طاقم الإدارة">Staff</a></li>
+            </ul>
+        </nav>
+        <div class="header-actions">
+            <a href="https://discord.gg/gHf8senS4R" target="_blank" class="discord-btn">
+                <i class="fab fa-discord"></i> <span data-en="Discord" data-ar="ديسكورد">Discord</span>
+            </a>
+            <div class="menu-dots" onclick="toggleMenu()">
+                <i class="fas fa-ellipsis-v"></i>
+                <div class="dropdown" id="dropdown-menu">
+                    <a href="#" data-en="Login" data-ar="تسجيل الدخول">Login</a>
+                    <a href="#" onclick="toggleLanguage()" data-en="عربي" data-ar="English">عربي</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="hero">
+        <h1 id="typing-text"></h1>
+        <p class="scroll-hint fade-in" data-en="Scroll Down" data-ar="انزل لأسفل">Scroll Down <br><i class="fas fa-chevron-down"></i></p>
+    </section>
+
+    <section id="about" class="animate-on-scroll">
+        <h2 data-en="Our Story" data-ar="قصة السيرفر">Our Story</h2>
+        <div class="content-box">
+            <p data-en="The story of Morg Network will be revealed soon... Stay tuned for an epic adventure!" data-ar="قصة سيرفر مورج نتورك سيتم الكشف عنها قريباً... استعد لمغامرة ملحمية!">The story of Morg Network will be revealed soon... Stay tuned for an epic adventure!</p>
+        </div>
+    </section>
+
+    <section id="store-options" class="animate-on-scroll">
+        <h2 data-en="Store" data-ar="المتجر">Store</h2>
+        <div class="store-buttons">
+            <a href="#ranks" class="store-choice-btn" data-en="Ranks" data-ar="رتب">Ranks</a>
+            <a href="#keys" class="store-choice-btn" data-en="Keys" data-ar="مفاتيح">Keys</a>
+        </div>
+    </section>
+
+    <section id="ranks" class="animate-on-scroll">
+        <h2 data-en="Server Ranks" data-ar="رتب السيرفر">Server Ranks</h2>
+        <div class="cards-container">
+            <div class="card rank-card morgo-plus">
+                <h3>MORGO+</h3>
+                <ul class="features">
+                    <li>MORGO+ prefix</li>
+                    <li>Priority in tab list</li>
+                    <li>Access commands: /enderchest, /fly in lobbies & afk zone, /Craft, /smithingtable, /anvil, /repair, /back</li>
+                    <li>All in vip, legend</li>
+                    <li>Morgo kit</li>
+                    <li>Get gems everywhere</li>
+                    <li>Early access to new features</li>
+                </ul>
+                <div class="price">50 EGP / <span data-en="Month" data-ar="شهر">Month</span></div>
+                <a href="https://discord.gg/gHf8senS4R" target="_blank" class="buy-btn" data-en="Buy via Discord" data-ar="شراء عبر الديسكورد">Buy via Discord</a>
+            </div>
+
+            <div class="card rank-card legend">
+                <h3>Legend</h3>
+                <ul class="features">
+                    <li>Legend prefix</li>
+                    <li>Priority in tab list</li>
+                    <li>Access commands: /enderchest, /fly in lobbies & afk zone, /Craft, /smithingtable, /anvil, /repair, /back</li>
+                    <li>All in vip</li>
+                    <li>Legend kit</li>
+                    <li>Get gems everywhere</li>
+                </ul>
+                <div class="price">40 EGP / <span data-en="Month" data-ar="شهر">Month</span></div>
+                <a href="https://discord.gg/gHf8senS4R" target="_blank" class="buy-btn" data-en="Buy via Discord" data-ar="شراء عبر الديسكورد">Buy via Discord</a>
+            </div>
+
+            <div class="card rank-card vip">
+                <h3>VIP</h3>
+                <ul class="features">
+                    <li>Vip prefix</li>
+                    <li>Priority in tab list</li>
+                    <li>/Fly in lobbies, afk zones</li>
+                    <li>Vip kit</li>
+                </ul>
+                <div class="price">30 EGP / <span data-en="Month" data-ar="شهر">Month</span></div>
+                <a href="https://discord.gg/gHf8senS4R" target="_blank" class="buy-btn" data-en="Buy via Discord" data-ar="شراء عبر الديسكورد">Buy via Discord</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="keys" class="animate-on-scroll">
+        <h2 data-en="Crate Keys" data-ar="مفاتيح الصناديق">Crate Keys</h2>
+        <div class="cards-container">
+            <div class="card key-card common">
+                <h3>Common Key</h3>
+                <div class="price">8 EGP</div>
+                <a href="https://discord.gg/gHf8senS4R" target="_blank" class="buy-btn" data-en="Buy via Discord" data-ar="شراء">Buy via Discord</a>
+            </div>
+            <div class="card key-card gold">
+                <h3>Gold Key</h3>
+                <div class="price">15 EGP</div>
+                <a href="https://discord.gg/gHf8senS4R" target="_blank" class="buy-btn" data-en="Buy via Discord" data-ar="شراء">Buy via Discord</a>
+            </div>
+            <div class="card key-card crimson">
+                <h3>Crimson Key</h3>
+                <div class="price">20 EGP</div>
+                <a href="https://discord.gg/gHf8senS4R" target="_blank" class="buy-btn" data-en="Buy via Discord" data-ar="شراء">Buy via Discord</a>
+            </div>
+            <div class="card key-card prime">
+                <h3>Prime Key</h3>
+                <div class="price">25 EGP</div>
+                <a href="https://discord.gg/gHf8senS4R" target="_blank" class="buy-btn" data-en="Buy via Discord" data-ar="شراء">Buy via Discord</a>
+            </div>
+            <div class="card key-card amethyst">
+                <h3>Amethyst Key</h3>
+                <div class="price">30 EGP</div>
+                <a href="https://discord.gg/gHf8senS4R" target="_blank" class="buy-btn" data-en="Buy via Discord" data-ar="شراء">Buy via Discord</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="staff" class="animate-on-scroll">
+        <h2 data-en="Staff Team" data-ar="طاقم الإدارة">Staff Team</h2>
+        <div class="cards-container staff-container">
+            <div class="card staff-card owner">
+                <h3 data-en="Owner" data-ar="الأونر (المالك)">Owner</h3>
+                <p class="staff-name">[_morgmc_]</p>
+            </div>
+            <div class="card staff-card founder">
+                <h3 data-en="Founder" data-ar="المؤسس">Founder</h3>
+                <p class="staff-name">[Aspic__]</p>
+            </div>
+            <div class="card staff-card admin">
+                <h3 data-en="Staff" data-ar="الإدارة">Staff</h3>
+                <p class="staff-name">[morg network staff]</p>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
