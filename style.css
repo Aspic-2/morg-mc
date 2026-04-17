@@ -28,7 +28,6 @@ body.ar {
     direction: rtl;
 }
 
-/* Header */
 header {
     position: fixed;
     top: -100px; /* Hidden initially for animation */
@@ -141,7 +140,6 @@ body.ar .dropdown { right: auto; left: 0; }
 }
 .dropdown a:hover { background: var(--primary); }
 
-/* Hero Section */
 #hero {
     height: 100vh;
     display: flex;
@@ -171,7 +169,6 @@ body.ar .dropdown { right: auto; left: 0; }
     animation: bounce 2s infinite;
 }
 
-/* Sections Base */
 section {
     padding: 80px 20px;
     min-height: 50vh;
@@ -187,7 +184,6 @@ h2 {
     text-shadow: 0 0 10px var(--primary);
 }
 
-/* Store Options */
 .store-buttons {
     display: flex;
     gap: 30px;
@@ -213,7 +209,6 @@ h2 {
     box-shadow: 0 10px 30px rgba(139, 92, 246, 0.5);
 }
 
-/* Cards (Ranks, Keys, Staff) */
 .cards-container {
     display: flex;
     gap: 30px;
@@ -290,7 +285,6 @@ body.ar .features { text-align: right; }
 
 .buy-btn:hover { transform: scale(1.1); }
 
-/* specific colors for cards */
 .morgo-plus { border-bottom: 4px solid #ffaa00; }
 .morgo-plus:hover { box-shadow: 0 0 30px #ffaa00; border-color: #ffaa00; }
 
@@ -300,7 +294,6 @@ body.ar .features { text-align: right; }
 .vip { border-bottom: 4px solid #55ff55; }
 .vip:hover { box-shadow: 0 0 30px #55ff55; border-color: #55ff55; }
 
-/* Scroll Animations */
 .animate-on-scroll {
     opacity: 0;
     transform: translateY(50px);
@@ -312,7 +305,6 @@ body.ar .features { text-align: right; }
     transform: translateY(0);
 }
 
-/* Keyframes */
 @keyframes blinkCursor {
     50% { border-right-color: transparent; }
 }
@@ -323,7 +315,6 @@ body.ar .features { text-align: right; }
     60% { transform: translateY(-7px); }
 }
 
-/* Content Box */
 .content-box {
     background: var(--card-bg);
     padding: 30px;
